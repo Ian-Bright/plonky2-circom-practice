@@ -1,0 +1,19 @@
+[package]
+name = "plonky2_circom_practice"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "plonky2_circom_practice"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+anyhow = "1.0.70"
+plonky2 = { git = "https://github.com/polymerdao/plonky2", rev = "4cb0b48df1d227d5461a4c28ed025aaea64e2e62" }
+plonky2_circom_verifier = { path = "../plonky2-circom" }
+serde = "1.0.159"
+serde_json = "1.0.95"
+
